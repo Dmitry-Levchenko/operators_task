@@ -17,9 +17,8 @@ void main(){
 
   int temperature = int.parse(input);
 
-  String tempDescription = temperature > 25 ? "Тепло" : "Прохолодно";
-  String coldDescription = temperature < 10 ? "Дуже холодно" : tempDescription;
+  String tempDescription = temperature > 25 ? "Тепло" : (temperature <10 ? "Дуже холодно" : "Прохолодно");
 
-  print('Опис температури: $coldDescription');
+  print('Опис температури: $tempDescription');
 }
 
